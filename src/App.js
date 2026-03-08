@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+import Imagecard from './components/Imagecard';
 import './App.css';
 
 function App() {
   return (
+    // JSX = JavaScript XML
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is my feature branch code change. I am learning how to use git and github for version control and collaboration.
-        </p>
-        <a
-          className="App-link"
-          href="https://sites.google.com/view/edusite-learning/home"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React with Edusite
-        </a>
-      </header>
+      <Imagecard name="Subhratanu Saha" imgLink="https://avatars.githubusercontent.com/u/64859956?v=4" />
+      <Imagecard name="Tanima Nag" imgLink="https://avatars.githubusercontent.com/u/171805697?v=4" />
+      <Imagecard name="Soumyadeep M." imgLink="https://avatars.githubusercontent.com/u/221869256?v=4" />
+      <Imagecard name="Sayan Sengupta" imgLink="https://avatars.githubusercontent.com/u/261204091?v=4" />
     </div>
   );
 }
