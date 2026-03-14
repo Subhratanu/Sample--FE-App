@@ -2,13 +2,22 @@ import Imagecard from './components/Imagecard';
 import './App.css';
 
 function App() {
+  const userData = [
+    { name: "Subhratanu Saha", githubId: "64859956" },
+    { name: "Tanima Nag", githubId: "171805697" },
+    { name: "Soumyadeep M.", githubId: "221869256" },
+    { name: "Sayan Sengupta", githubId: "261204091" },
+    { name: "Debayan Roy", githubId: "172286422"}
+  ];
   return (
     // JSX = JavaScript XML
     <div className="App">
-      <Imagecard name="Subhratanu Saha" imgLink="https://avatars.githubusercontent.com/u/64859956?v=4" />
-      <Imagecard name="Tanima Nag" imgLink="https://avatars.githubusercontent.com/u/171805697?v=4" />
-      <Imagecard name="Soumyadeep M." imgLink="https://avatars.githubusercontent.com/u/221869256?v=4" />
-      <Imagecard name="Sayan Sengupta" imgLink="https://avatars.githubusercontent.com/u/261204091?v=4" />
+      {
+        userData.map((user)=> (
+          <Imagecard key={user.githubId} name={user.name} imgLink={`https://avatars.githubusercontent.com/u/${user.githubId}?v=4`} />
+          <h3>Student</h3>
+        ))
+      }
     </div>
   );
 }
