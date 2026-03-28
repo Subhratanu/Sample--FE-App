@@ -9,15 +9,21 @@ const CartCounter = () => {
     }
     const decrementCounter = () => {
         if(value < 1) return;
-        setValue(value-1);    
-        
+        setValue(value-1);      
     }
+    const incrementButtonProps = value >=20 ? {disabled:true} : {onClick:incrementCounter}; // OBJECT {onClick:incrementCounter}
+    const decrementButtonProps = value <= 1 ? {disabled:true} : {onClick:decrementCounter}; 
     // DRY
     return (
         <>
-            {value>=20 ? <button disabled>+</button> : <button onClick={incrementCounter}>+</button>}
+            <button {...incrementButtonProps} >+</button>
             <h3>{value}</h3>
-            {value <= 1 ? <button disabled>-</button> : <button onClick={decrementCounter}>-</button>}
+            <button {...decrementButtonProps} >-</button>
+            {/* 
+            1. Rest Operator
+            2. Spread Operator
+            3. Array & Object Destructuring
+            */}
         </>
     )
 };

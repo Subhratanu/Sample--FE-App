@@ -1,4 +1,5 @@
 import './App.css';
+import CardList from './components/CardList';
 import CartCounter from './components/CartCounter';
 function App() {
   
@@ -6,6 +7,7 @@ function App() {
     // JSX = JavaScript XML
     <div className="App">
       <CartCounter/>
+      <CardList placeholder="placeholder image"/>
     </div>
   );
 }
