@@ -1,14 +1,22 @@
+import { createContext } from 'react';
 import './App.css';
 import CardList from './components/CardList';
 import CartCounter from './components/CartCounter';
+import CompA from './components/parentTochild/compA';
+export const userContext = createContext();
 function App() {
   
+  const placeholder="placeholder image"
+  const isReadOnly = true; // set to true to make the context read-only
   return (
-    // JSX = JavaScript XML
-    <div className="App">
-      <CartCounter/>
-      <CardList placeholder="placeholder image"/>
-    </div>
+    <userContext.Provider value={placeholder}>
+    {/* // JSX = JavaScript XML */}
+      <div className="App">
+        <CartCounter/>
+        <CardList />
+        <CompA/>
+      </div>
+    </userContext.Provider>
   );
 }
 
