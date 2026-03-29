@@ -1,4 +1,4 @@
-const compD = () => {
+const CompD = () => {
     return (
         <div>
             <h1>This is component D</h1>
@@ -7,4 +7,4 @@ const compD = () => {
         </div>
     );
 }
-export default compD;
+export default CompD;

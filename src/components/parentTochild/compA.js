@@ -1,5 +1,5 @@
 import CompB from "./compB";
-const compA = () => {
+const CompA = () => {
     return (
         <div>
             <h1>This is component A</h1>
@@ -7,4 +7,4 @@ const compA = () => {
         </div>
     );
 }
-export default compA;
+export default CompA;

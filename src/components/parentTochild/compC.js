@@ -1,5 +1,5 @@
 import CompD from "./compD";
-const compC = () => {
+const CompC = () => {
     return (
         <div>
             <h1>This is component C</h1>
@@ -7,4 +7,4 @@ const compC = () => {
         </div>
     );
 }
-export default compC;
+export default CompC;
