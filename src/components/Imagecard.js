@@ -5,7 +5,7 @@
 import { useContext } from "react";
 import { userContext } from "../App";
 function Imagecard({name, imgLink}) {
-    const placeholder = useContext(userContext);
+    const {placeholder} = useContext(userContext);
     console.log("This is the Imagecard component");
     return (
         <>

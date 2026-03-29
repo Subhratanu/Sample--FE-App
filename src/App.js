@@ -7,9 +7,9 @@ export const userContext = createContext();
 function App() {
   
   const placeholder="placeholder image"
-  const isReadOnly = true; // set to true to make the context read-only
+  const isReadOnly = false; // set to true to make the context read-only
   return (
-    <userContext.Provider value={placeholder}>
+    <userContext.Provider value={{  placeholder, isReadOnly}}>
     {/* // JSX = JavaScript XML */}
       <div className="App">
         <CartCounter/>
