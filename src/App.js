@@ -6,7 +6,7 @@ function App() {
   return (
     // JSX = JavaScript XML
     <div className="App">
-      <CartCounter/>
+     
       <CardList placeholder="placeholder image"/>
     </div>
   );
