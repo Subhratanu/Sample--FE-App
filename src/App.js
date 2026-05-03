@@ -1,15 +1,27 @@
 import './App.css';
 import CardList from './components/CardList';
 import CartCounter from './components/CartCounter';
+import Navbar from './components/Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
 function App() {
   
   return (
     // JSX = JavaScript XML
     <div className="App">
-      <CartCounter/>
-      <CardList placeholder="placeholder image"/>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+
